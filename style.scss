@@ -158,16 +158,18 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;  // add horizontal padding for left and right spacing
+  padding: 20px 15px;  // add horizontal padding for left and right spacing
   border-bottom: 1px solid $lightGray;
+  flex-wrap: wrap;
 
   @include mobile {
+    flex-direction: column;
     text-align: center;
+    padding: 20px 10px;
   }
 }
 
 .site-avatar {
-  float: left;
   width: 70px;
   height: 70px;
   margin-right: 15px;
@@ -184,7 +186,6 @@ img {
 }
 
 .site-info {
-  float: left;
 
   @include mobile {
     float: none;
@@ -213,8 +214,19 @@ img {
   }
 }
 
+.site-branding {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;  // allow shrinking to save space
+  min-width: 0;    // for text overflow
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 nav {
-  float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
