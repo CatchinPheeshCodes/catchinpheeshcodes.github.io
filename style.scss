@@ -155,7 +155,10 @@ img {
 }
 
 .masthead {
-  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;  // add horizontal padding for left and right spacing
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
